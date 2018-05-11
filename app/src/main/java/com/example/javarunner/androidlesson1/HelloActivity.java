@@ -1,7 +1,7 @@
 package com.example.javarunner.androidlesson1;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class HelloActivity extends AppCompatActivity {
 
@@ -11,3 +11,4 @@ public class HelloActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hello);
     }
 }
+//jhjhjh
