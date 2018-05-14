@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">AndroidLesson1</string>
+    <string name="app_name">Погода</string>
+    <string name="weather_text">Погода</string>
 </resources>
