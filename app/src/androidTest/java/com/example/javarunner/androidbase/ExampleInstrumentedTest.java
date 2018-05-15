@@ -1,4 +1,4 @@
-package com.example.javarunner.androidlesson1;
+package com.example.javarunner.androidbase;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
