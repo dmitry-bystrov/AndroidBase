@@ -1,4 +1,4 @@
-package com.example.javarunner.androidlesson1;
+package com.example.javarunner.androidbase;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,4 +11,3 @@ public class HelloActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hello);
     }
 }
-//jhjhjh
