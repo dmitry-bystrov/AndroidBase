@@ -7,6 +7,7 @@
     tools:context=".HelloActivity">
 
     <TextView
+        android:id="@+id/weather_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/weather_text"
@@ -14,6 +15,45 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="@dimen/vertical_bias" />
+
+    <TextView
+        android:id="@+id/temperature_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temperature_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/weather_text"
+        app:layout_constraintVertical_bias="@dimen/line_bias"
+        app:layout_constraintHorizontal_bias="@dimen/horizontal_bias"
+         />
+
+    <TextView
+        android:id="@+id/pressure_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pressure_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/temperature_text"
+        app:layout_constraintVertical_bias="@dimen/line_bias"
+        app:layout_constraintHorizontal_bias="@dimen/horizontal_bias"
+        />
+
+    <TextView
+        android:id="@+id/humidity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/humidity_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pressure_text"
+        app:layout_constraintVertical_bias="@dimen/line_bias"
+        app:layout_constraintHorizontal_bias="@dimen/horizontal_bias"
+        />
 
 </android.support.constraint.ConstraintLayout>
