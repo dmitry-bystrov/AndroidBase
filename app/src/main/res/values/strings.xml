@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">Погода</string>
+    <string name="app_name">Погода (название приложения)</string>
     <string name="weather_text">Погода</string>
-    <string name="temperature_text">Температура:</string>
-    <string name="pressure_text">Давление:</string>
-    <string name="humidity_text">Влажность:</string>
+    <string name="temperature_text">Температура</string>
+    <string name="pressure_text">Давление</string>
+    <string name="humidity_text">Влажность</string>
+    <string name="city_text">Город</string>
+    <string name="show_text">Показать</string>
 </resources>
