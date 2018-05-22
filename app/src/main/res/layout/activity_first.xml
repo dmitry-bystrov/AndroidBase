@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_default"
     android:orientation="vertical"
-    android:gravity="center"
     tools:context=".FirstActivity">
 
 
@@ -23,26 +23,34 @@
         android:text="" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/checkBoxTemperature"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_default"
+        android:layout_marginTop="@dimen/margin_default"
         android:text="@string/temperature_text" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/checkBoxPressure"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_default"
+        android:layout_marginTop="@dimen/margin_default"
         android:text="@string/pressure_text" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/checkBoxHumidity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_default"
+        android:layout_marginTop="@dimen/margin_default"
         android:text="@string/humidity_text" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonShow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:layout_marginTop="@dimen/margin_default"
         android:text="@string/show_text" />
 </LinearLayout>

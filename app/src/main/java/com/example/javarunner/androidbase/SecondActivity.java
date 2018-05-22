@@ -1,10 +1,9 @@
 package com.example.javarunner.androidbase;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -13,71 +12,15 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        String instanceState;
+        Bundle bundle = getIntent().getExtras();
+        TextView textViewHeader = findViewById(R.id.header_text);
+        TextView textViewTemperature = findViewById(R.id.temperature_text);
+        TextView textViewPressure = findViewById(R.id.pressure_text);
+        TextView textViewHumidity = findViewById(R.id.humidity_text);
 
-        if (savedInstanceState == null) {
-            instanceState = "Первый запуск";
-        } else {
-            instanceState = "Повторный запуск";
-        }
-
-        Toast.makeText(getApplicationContext(), String.format("%s - %s", instanceState, "onCreate"), Toast.LENGTH_SHORT).show();
-        Log.d("LifeCircle", String.format("%s - %s", instanceState, "onCreate"));
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Toast.makeText(getApplicationContext(), "onStart", Toast.LENGTH_SHORT).show();
-        Log.d("LifeCircle", "onStart");
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        Toast.makeText(getApplicationContext(), "onRestoreInstanceState", Toast.LENGTH_SHORT).show();
-        Log.d("LifeCircle", "onRestoreInstanceState");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Toast.makeText(getApplicationContext(), "onResume", Toast.LENGTH_SHORT).show();
-        Log.d("LifeCircle", "onResume");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Toast.makeText(getApplicationContext(), "onPause", Toast.LENGTH_SHORT).show();
-        Log.d("LifeCircle", "onPause");
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
-        Toast.makeText(getApplicationContext(), "onSaveInstanceState", Toast.LENGTH_SHORT).show();
-        Log.d("LifeCircle", "onSaveInstanceState");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Toast.makeText(getApplicationContext(), "onStop", Toast.LENGTH_SHORT).show();
-        Log.d("LifeCircle", "onStop");
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Toast.makeText(getApplicationContext(), "onRestart", Toast.LENGTH_SHORT).show();
-        Log.d("LifeCircle", "onRestart");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Toast.makeText(getApplicationContext(), "onDestroy", Toast.LENGTH_SHORT).show();
-        Log.d("LifeCircle", "onDestroy");
+        textViewHeader.setText(bundle.getString(FirstActivity.EXTRA_CITY));
+        textViewTemperature.setVisibility(bundle.getBoolean(FirstActivity.EXTRA_TEMPERATURE)?View.VISIBLE:View.GONE);
+        textViewPressure.setVisibility(bundle.getBoolean(FirstActivity.EXTRA_PRESSURE)?View.VISIBLE:View.GONE);
+        textViewHumidity.setVisibility(bundle.getBoolean(FirstActivity.EXTRA_HUMIDITY)?View.VISIBLE:View.GONE);
     }
 }
