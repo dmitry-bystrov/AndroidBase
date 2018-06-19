@@ -3,9 +3,11 @@
     <string name="weather_text">Погода</string>
     <string name="temperature_text">Температура</string>
     <string name="pressure_text">Давление</string>
+    <string name="pressure_unit">мм рт. ст.</string>
     <string name="humidity_text">Влажность</string>
     <string name="select_location_text">Выберите местоположение</string>
     <string name="show_text">Показать погоду</string>
+    <string name="history_of_temperature">История температуры</string>
 
     <string-array name="Locations">
         <item>Москва</item>
@@ -13,5 +15,10 @@
         <item>Екатеринбург</item>
         <item>Новосибирск</item>
         <item>Самара</item>
+        <item>Воронеж</item>
+        <item>Иркутск</item>
+        <item>Красноярск</item>
+        <item>Хабаровск</item>
+        <item>Владивосток</item>
     </string-array>
 </resources>
